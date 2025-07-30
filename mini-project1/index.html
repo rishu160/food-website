@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/pic1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+
+<a href="#" class="logo"><i class="fas fa-utensils"></i><span class="kakana">K</span>akana <span class="blast">B</span>last.</a>
+<nav class="navbar">
+    <a class="active" href="#home">home</a>
+    <a href="#dishes">dishes</a>
+    <a href="#about">about</a>
+    <a href="#menu">menu</a>
+    <a href="#review">review</a>
+    <a href="#order">order</a>
+</nav>
+<div class="icons">
+<i class="fas fa-bars" id="menu-bars"></i>
+<i class="fas fa-search" id="search-icon"></i>
+<a href="#" class="fas fa-heart"></a>
+<i class="fas fa-shopping-cart" id="cart-icon"></i>
+<span id="cart-quantity">0</span>
+</div>
+
+    </header>
+
+
+ <div id="cart-container" class="cart-container">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+    </div>
+
+
+    <!-- search form -->
+    <form action="" id="search-form">
+  <input type="search" placeholder="search here..." name="" id="search-box">
+  <label for="search-box" class="fas fa-search"></label>
+  <i class="fas fa-times" id="close"></i>
+
+    </form>
+    <!-- home section start -->
+    <section class="home" id="home">
+    <div class=" swiper home-slider">
+
+    <div class="swiper-wrapper wrapper">
+        
+        
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>spicy noodle</h3>
+            <p>Spicy noodles are one of the best ways to prepare ramen.
+                 From chili oil to sambal to hot peppers, <br>there are so many ways to add heat to a dish.</p>
+            <a href="#" class="btn"> order now</a>   
+            </div>
+            <div class="image">
+                <img class="image-cont" src="assets/pop1.jpg" alt="">
+            </div> 
+
+        </div>
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>special pizza</h3>
+            <p>Pizza is a dish of Italian origin consisting of a usually round, flat base of
+                 leavened wheat-based dough topped with tomatoes, cheese, and often various ...</p>
+            <a href="#" class="btn">order now</a>   
+            </div>
+            <div class="image">
+                <img  class="image-cont" src="assets/pizza.jpg" alt="">
+            </div> 
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>Bean Burger</h3>
+            <p>These bean burgers are dairy, egg, and gluten-free, don’t require any complicated steps, are perfect for making ahead, and will
+                 make both the meat-eaters and non-meat eaters in your life happy!</p>
+            <a href="#" class="btn">order now</a>   
+            </div>
+            <div class="image">
+                <img  class="image-cont" src="assets/bub.jpg" alt="">
+            </div> 
+
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+
+    </div>
+
+</section>
+<!-- home section complete-->
+
+
+
+<!-- dishes section start  -->
+<section class="dishes" id="dishes">
+
+<h3 class="sub-heading"> our dishes</h3>
+<h1 class="heading"> our popular  dishes</h1>
+<div class="box-container">
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/french.jpg" alt="">
+    <h3>french fries</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 270</span>
+    
+    <button onclick="addToCart('french fries', 270)">Add to Cart</button>
+    
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/cake.jpg" alt="">
+    <h3>Butter cake</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 140</span>
+    <button onclick="addToCart('butter cake', 140)">Add to Cart</button>
+    
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/pasta.jpg" alt="">
+    <h3>pasta</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 299</span>
+    <button onclick="addToCart('pasta', 299)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/soup.jpg" alt="">
+    <h3>mushroom soup</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 169</span>
+    <button onclick="addToCart('mushroom soup', 169)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/pass.jpg" alt="">
+    <h3>Mount Nemrut.</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 205</span>
+    <button onclick="addToCart('Mount Nemrut', 205)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/pra.jpg" alt="">
+    <h3>veg roll</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 119</span>
+    <button onclick="addToCart('veg roll', 119)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/rice.jpg" alt="">
+    <h3>soyabean rice</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 150</span>
+    <button onclick="addToCart('soyabean rice', 150)">Add to Cart</button>
+    
+
+  </div>
+
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="assets/pizza.jpg" alt="">
+    <h3>Pepperoni Pizza</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 250</span>
+    <button onclick="addToCart('Pepperoni Pizza', 250)">Add to Cart</button>
+    
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- about section start -->
+<section class="about" id="about">
+
+  <h3 class="sub-heading"> about us</h3>
+  <h1 class="heading"> why choose us? </h1>
+
+  <div class="row">
+
+<div class="image">
+  <img src="assets/about.jpg" alt="">
+</div>
+
+<div class="content">
+<h3> best food and service in the country</h3>
+<p>
+  Customers use our platform to search and discover restaurants, read and write customer generated reviews
+   and view and upload photos, order food delivery, book a table and make payments while dining-out at restaurants.
+    On the other hand, we provide restaurant partners with industry-specific marketing tools which enable them 
+  to engage and acquire customers to grow their business while also providing a reliable and efficient last mile delivery service. 
+</p>
+<p>
+  Location is one of the most critical aspects that drives customer experience through Search & Discovery and Online Ordering
+   on Zomato. Starting from the different restaurants to be showcased on the app,
+   to delivering orders at the accurate location, it plays a big role in determining how customer-friendly our platform really is.
+</p>
+<div class="icons-container">
+<div class="icons">
+<i class="fas fa-shipping-fast"></i>
+<span>free delivery</span>
+
+</div>
+<div class="icons">
+  <i class="fas fa-rupee-sign"></i>
+  <span>easy payment</span>
+  
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <span>24/7 services</span>
+    
+    </div>
+
+</div>
+<a href="#" class="btn">learn more</a>
+
+
+
+</div>
+
+  </div>
+</section>
+<!-- about section ends -->
+
+
+<!-- menu section starts -->
+<section class="menu" id="menu">
+
+  <h3 class="sub-heading"> our menu</h3>
+  <h1 class="heading"> today's speciality </h1>
+
+<div class="box-container">
+
+<div class="box">
+  <div class="image">
+    <img src="data:image/jpeg;base64,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" alt="">
+    <a href="#" class="fas fa-heart"></a>
+  </div>
+  <div class="content">
+
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    <h3>dahi arbi</h3>
+    <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+       on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+    </p>
+  <button onclick="addToCart('dahi arbi', 349)">Add to Cart</button>
+    <span class="price">&#8377 349</span>
+  </div>
+  </div>
+  <div class="box">
+    <div class="image">
+      <img src="assets/p1.jpg" alt="">
+      <a href="#" class="fas fa-heart"></a>
+    </div>
+    <div class="content">
+  
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <h3>panner tikka masala</h3>
+      <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+         on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+      </p>
+      <button onclick="addToCart('panner tikka masala', 349)">Add to Cart</button>
+            <span class="price">&#8377 149</span>
+    </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="assets/p2.jpg" alt="">
+        <a href="#" class="fas fa-heart"></a>
+      </div>
+      <div class="content">
+    
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h3>Turkey chicken roast</h3>
+        <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+           on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+        </p>
+        <button onclick="addToCart('Turkey chicken roast', 349)">Add to Cart</button>
+        <span class="price">&#8377 150</span>
+      </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="assets/p3.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+      
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>saag panner</h3>
+          <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+             on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+          </p>
+          <button onclick="addToCart('saag panner', 200)">Add to Cart</button>
+          <span class="price">&#8377 200</span>
+        </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="assets/p4.jpg" alt="">
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+        
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>North special thali</h3>
+            <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+               on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+            </p>
+            <button onclick="addToCart('North special thali', 300)">Add to Cart</button>
+            <span class="price">&#8377 300</span>
+          </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="assets/p5.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+          
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Caesar Salad</h3>
+              <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                 on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+              </p>
+              <button onclick="addToCart('Caesar Salad', 350)">Add to Cart</button>
+              <span class="price">&#8377 350</span>
+            </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="assets/p6.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+              </div>
+              <div class="content">
+            
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>chicken rice</h3>
+                <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                   on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                </p>
+                <button onclick="addToCart('chicken rice', 500)">Add to Cart</button>
+                <span class="price">&#8377 500</span>
+              </div>
+              </div>
+              <div class="box">
+                <div class="image">
+                  <img src="assets/p7.jpg" alt="">
+                  <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+              
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <h3>Coleslaw</h3>
+                  <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                     on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                  </p>
+                  <button onclick="addToCart('Coleslaw', 200)">Add to Cart</button>
+                  <span class="price">&#8377 200</span>
+                </div>
+                </div>
+                <!-- <div class="image">
+                  <div class="image">
+                    <img src="assets/p8.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                  </div>
+                  <div class="content">
+                
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>delicious food</h3>
+                    <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                       on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                    </p>
+                    <a href="#" class="btn">add to cart</a>
+                    <span class="price">&#8377 349</span>
+                  </div> -->
+                  
+
+</div>
+
+</div>
+
+</section>
+
+<!-- review section start -->
+<section class="review" id="review">
+  <h3 class="sub-heading"> customer's review</h3>
+  <h1 class="heading"> what they say </h1>
+  <div class=" swiper review-slider">
+  <div class="swiper-wrapper">
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="assets/rishu kumar.jpg" alt="">
+        <div class="user-info">
+          <h3>rishu kumar </h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="assets/rishu kumar.jpg" alt="">
+        <div class="user-info">
+          <h3>rishu kumar</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="assets/rishu kumar.jpg" alt="">
+        <div class="user-info">
+          <h3>Rishu</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="assets/rishu kumar.jpg" alt="">
+        <div class="user-info">
+          <h3>rishu kumar</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+</section>
+
+<!-- order section start -->
+
+
+<section class="order" id="order">
+
+  <h3 class="sub-heading"> order now</h3>
+  <h1 class="heading"> free and fast</h1>
+  <form action="">
+
+<div class="inputBox">
+
+<div class="input">
+  <span>Your name</span>
+  <input type="text" placeholder="Enter your name">
+</div>
+
+<div class="input">
+  <span>Your order</span>
+  <input type="number" placeholder="Enter your number">
+</div>
+
+<div class="inputBox">
+<div class="input">
+  <span>Your food</span>
+  <input type="number" placeholder="Enter food name">
+</div>
+<div class="input">
+  <span>additional food</span>
+  <input type="test" placeholder="Extra with food">
+</div>
+</div>
+<div class="inputBox">
+
+  <div class="input">
+    <span>how much</span>
+    <input type="number" placeholder="how many order">
+  </div>
+  
+  <div class="input">
+    <span>date and time</span>
+    <input type="datetime-local" >
+  </div>
+  </div>
+
+  <div class="inputBox">
+
+    <div class="input">
+      <span>Your address</span>
+      <textarea name=""  placeholder="enter your address" id="" cols="30" rows="10">
+      </textarea>
+    </div>
+    
+    <div class="input">
+      <span> your number</span>
+      <textarea name=""  placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+    </div>
+    </div> 
+
+    <input type="summit" value="order now" class="btn">
+
+
+  </form>
+
+
+
+</section>
+
+<!-- footer section start -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+
+    <div class="box">
+
+      <h3>location</h3>
+      <a href="#">India</a>
+      <a href="#">japan</a>
+      <a href="#">russia</a>
+      <a href="#">USA</a>
+      <a href="#">Italy</a>
+    </div>
+    <div class="box">
+
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">dishes</a>
+      <a href="#">about</a>
+      <a href="#">menu</a>
+      <a href="#">review</a>
+      <a href="#">order</a>
+    </div>
+    <div class="box">
+
+      <h3>contact info</h3>
+      <a href="#">+914568792456</a>
+      <a href="#">+111-789-4569</a>
+      <a href="#">Rishurajput124@gmail.com</a>
+      <a href="#">rishukuma.rk921@gmail.com</a>
+      <a href="#">ranchi, india - 834004</a>
+    </div>
+    <div class="box">
+
+      <h3>follow us</h3>
+      <a href="#">instagram</a>
+      <a href="#">twitter</a>
+      <a href="#">linkedin</a>
+     
+    </div>
+
+
+  </div>
+  <div class="credit">copyright @ 2024 by <span>mr. rishu kumar</span></div>
+</section>
+
+
+
+<!-- loader part -->
+<!-- <div class="loader-container">
+  <img src="assets/gift.gif" alt="">
+</div> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
